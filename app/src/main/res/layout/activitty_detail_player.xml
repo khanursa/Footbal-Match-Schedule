@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <include
+        android:id="@+id/toolbarPlayer"
+        layout="@layout/toolbar"/>
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@id/toolbarPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/layoutFanartPlayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <ProgressBar
+                    android:id="@+id/progressBanner"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewFanart"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:focusableInTouchMode="true" />
+
+                <com.rd.PageIndicatorView
+                    android:id="@+id/indicatorFanart"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/viewFanart"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    app:piv_animationType="drop"
+                    app:piv_dynamicCount="true"
+                    app:piv_selectedColor="@android:color/black"
+                    app:piv_unselectedColor="@android:color/darker_gray"
+                    tools:piv_padding="12dp"
+                    tools:piv_radius="8dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/layoutCutout"
+                android:layout_below="@id/layoutFanartPlayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageCutoutPlayer"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerHorizontal="true"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/informPlayer1"
+                    android:layout_below="@id/imageCutoutPlayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/informPlayer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutCutout"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"/>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

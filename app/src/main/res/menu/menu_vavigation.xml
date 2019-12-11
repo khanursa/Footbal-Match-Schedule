@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_daftar_liga"
+        android:icon="@drawable/ic_view_list_black_24dp"
+        android:title="@string/liga" />
+    <item
+        android:id="@+id/menu_pencarian"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="@string/pencarian" />
+    <item
+        android:id="@+id/menu_favorit"
+        android:icon="@drawable/ic_favorite_black_24dp"
+        android:title="@string/favorite"/>
+</menu>

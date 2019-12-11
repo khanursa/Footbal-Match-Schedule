@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:id="@+id/errorConnection" >
+
+    <ImageView
+        android:id="@+id/imageNoSignal"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/ic_signal_wifi_off_black_24dp"
+        android:tint="@android:color/holo_red_dark"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageNoSignal"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:text="@string/no_signal"/>
+
+</RelativeLayout>

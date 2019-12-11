@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:drawable/dialog_holo_light_frame"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/posterTeam"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="3dp"
+                android:layout_marginBottom="5dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_launcher" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/nameTeam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/posterTeam"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/separatorAllLeague"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/nameTeam"
+                android:layout_toEndOf="@id/posterTeam"
+                android:background="@android:color/darker_gray" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textTeam"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/separatorAllLeague"
+                android:layout_alignBottom="@id/posterTeam"
+                android:layout_toStartOf="@id/separatorFavorite"
+                android:layout_marginBottom="5dp"
+                android:layout_toEndOf="@id/posterTeam"
+                android:ellipsize="end"
+                android:justificationMode="inter_word"
+                android:paddingTop="5dp"
+                android:paddingBottom="2dp"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/separatorFavorite"
+                android:layout_width="2dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nameTeam"
+                android:layout_alignBottom="@id/posterTeam"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toStartOf="@id/layoutFavorite"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:id="@+id/layoutFavorite"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nameTeam"
+                android:layout_alignBottom="@id/posterTeam"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/teamFavorite"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:tint="@android:color/holo_red_dark"
+                    app:srcCompat="@drawable/ic_favorite_border_black_24dp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

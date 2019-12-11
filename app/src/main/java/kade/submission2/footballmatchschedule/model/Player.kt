@@ -1,0 +1,31 @@
+package kade.submission2.footballmatchschedule.model
+
+data class Player(
+    val idPlayer: Int,
+    val idTeam: Int,
+    val strNationality: String,
+    val strPlayer: String,
+    val strTeam: String,
+    val strSport: String,
+    val dateBorn: String,
+    val strNumber: String,
+    val strWage: String,
+    val strKit: String,
+    val strAgent: String,
+    val strBirthLocation: String,
+    val strDescriptionEN: String,
+    val strGender: String,
+    val strPosition: String,
+    val strHeight: String,
+    val strWeight: String,
+    val strThumb: String,
+    val strCutout: String,
+    val strRender: String,
+    val strFacebook: String,
+    val strTwitter: String,
+    val strInstagram: String,
+    val strFanart1: String,
+    val strFanart2: String,
+    val strFanart3: String,
+    val strFanart4: String
+)

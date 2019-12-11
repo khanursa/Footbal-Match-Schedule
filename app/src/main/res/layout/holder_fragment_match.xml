@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:drawable/dialog_holo_light_frame"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:text="Round 12"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/textRound"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:text="Date Event : 2019-11-23"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:id="@+id/layoutMatchTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_below="@id/textRound"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@id/separatorFavorite">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/logoTeam1"
+            android:layout_width="80dp"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerInside" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/logoTeam1"
+            android:layout_alignBottom="@id/logoTeam1"
+            android:layout_toStartOf="@id/logoTeam2"
+            android:layout_toEndOf="@id/logoTeam1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/skorTeam1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01"
+                android:textSize="20sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/vs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" VS "
+                android:textColor="@color/colorAccent"
+                android:textSize="30sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/skorTeam2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/logoTeam2"
+            android:layout_width="80dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentEnd="true"
+            android:scaleType="centerInside" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/separatorFavorite"
+        android:layout_width="2dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textRound"
+        android:background="@android:color/darker_gray"
+        android:layout_alignBottom="@id/layoutMatchTeam"
+        android:layout_toStartOf="@id/layoutFavorite"
+        />
+
+    <LinearLayout
+        android:id="@+id/layoutFavorite"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textRound"
+        android:layout_alignBottom="@id/layoutMatchTeam"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageFavorite"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:tint="@android:color/holo_red_dark"
+            app:srcCompat="@drawable/ic_favorite_border_black_24dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
